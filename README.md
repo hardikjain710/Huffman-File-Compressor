@@ -1,5 +1,5 @@
 # File Compressor (Huffman Coding)
-<img width="473" height="41" alt="Image" src="https://github.com/user-attachments/assets/6e3ba413-67f7-42d9-bd4f-71be6249dd73" />
+<img width="493" height="28" alt="Image" src="https://github.com/user-attachments/assets/e5290875-fe74-4a0c-a7b0-3d118e09f6da" />
 
 A C++ tool that compresses and decompresses text files using the Huffman Coding algorithm. I built this project to understand how file compression works at a low level, specifically focusing on bit manipulation and data structures.
 
