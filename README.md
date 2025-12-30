@@ -96,3 +96,31 @@ Since this is a lossless compression tool, data integrity is critical. I validat
 * **Language:** C++
 
 * **Concepts:** Greedy Algorithms, File I/O (fstream), Pointers, STL (Map, Vector, Priority Queue).
+
+  ## 📂 Project Structure
+I refactored the codebase into a modular design to separate logic from the interface.
+
+| File | Description |
+|---|---|
+| **`main.cpp`** | The entry point. Handles the CLI menu and user input. |
+| **`huffman.cpp`** | Contains the core logic (Heap construction, Tree traversal, Bit manipulation). |
+| **`huffman.h`** | Header file acting as an interface (Struct definitions & function prototypes). |
+| **`input.txt`** | A sample text file used for testing compression. |
+
+## ⚠️ Limitations & Future Improvements
+While functional, this project has room for optimization:
+* **Metadata Overhead:** Currently, the Huffman Tree is rebuilt during decompression. A production version would serialize the tree header into the compressed file.
+* **Memory Usage:** The program loads the entire file into memory. For large files (e.g., 1GB+), a **streaming approach** (reading/writing in chunks) would be required to prevent RAM overflow.
+* **Padding Bits:** Small "garbage" characters may appear at the end of the decompressed file due to 8-bit alignment. Adding a "total character count" to the header would solve this.
+
+
+## 🧠 Key Learnings
+* **Bitwise Operations:** Gained deep understanding of `<<`, `>>`, and `|` operators to pack data tighter than standard `char` types.
+* **Memory Management:** Managed dynamic memory for Tree Nodes to prevent memory leaks during recursion.
+* **System Design:** Refactoring a monolithic script into a modular header/source structure taught me the importance of clean interfaces.
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to open an issue or submit a Pull Request if you find a bug or want to improve the CLI interface.
+
+## 📜 License
+This project is open-source and available under the [MIT License](LICENSE).
